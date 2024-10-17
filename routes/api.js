@@ -126,37 +126,7 @@ connect_db()//////////connect to database
   })
 
     
-   /* .post( (req, res) => {
-      let bookid = req.params.id;
-      let comment = req.body.comment;
-       if(!bookid || !comment) {
-        return res.send("missing required field comment")
-       } else {
-        
-         book.findById(bookid, (err, data) => {
-          if (err) {
-            console.log("error in retriving data")
-            return //res.status(500) // internal error
-          } else {
-            if (!data) {
-              console.log("book dosent exist")
-              return res.send("no book exists") // handling bad request
-            }
-            data.comments.push(comment) // inserting a new comment
-            data.commentcount += 1
-            data.__v = data.commentcount
-            data.save().then(data => {
-              console.log("updated")
-              const { comments, _id, title, commentcount } = data
-              return res.json({comments, _id, title, commentcount })
-            }).catch(err => {
-              console.error("Error in saving updated data:")
-              return res.send("no book exists") // internal error
-            })
-          }
-         })  
-       }
-    }) */
+   
     
   .delete(function(req, res){
       let bookid = req.params.id;
