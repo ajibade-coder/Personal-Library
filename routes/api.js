@@ -12,6 +12,8 @@
 const connect_db = require('../connection.js')
 const book = require('../book_schema')
 
+
+ 
 module.exports = function (app) {
   
 connect_db()//////////connect to database
@@ -126,8 +128,7 @@ connect_db()//////////connect to database
   })
 
     
-   
-    
+  
   .delete(function(req, res){
       let bookid = req.params.id;
       //if successful response will be 'delete successful'
